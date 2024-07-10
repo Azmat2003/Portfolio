@@ -1,0 +1,63 @@
+@media (min-width: 700px) and (max-width: 1100px) {
+    .project-cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .projectCardProperties {
+        width: 40%;
+    }
+    
+}
+
+@media (max-width: 1020px){
+    
+    .intro {
+        font-size: 2rem;
+    }
+
+    .secondSection {
+        font-size: large;
+    }
+
+    .secondSection .dp img {
+        height: 25rem;
+    }
+
+    .aboutMe p {
+        padding-right: 2rem;
+        font-size: x-large;
+    }
+
+    .social {
+        margin-top: 1.7rem;
+        gap: 1rem;
+    }
+
+    .social i {
+        font-size: 2rem;
+    }
+
+    .social i:hover {
+        transform: scale(1.2);
+    }
+
+    .contact-right img {
+        width: 18rem;
+    }
+
+
+    
+
+}
+
+@media (max-width:790px) {
+    .firstSection .intro {
+        width: 65%;
+    }
+    .firstSection .photo{
+        width: 20%;
+    }
+}
+
+
