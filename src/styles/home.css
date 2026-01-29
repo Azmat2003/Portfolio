@@ -1,0 +1,122 @@
+.home-container {
+  display: flex;
+  align-items: center; /* Vertically centers everything */
+  justify-content: space-between;
+  height: 100vh;
+  background-color: transparent; /* Fixed 'none' to 'transparent' */
+  color: #FFFFFF;
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden;
+  margin-left: 3rem;
+  padding-right: 3rem; /* Added padding so the guy isn't stuck to the edge */
+}
+
+/* --- QUOTE SECTION (Your existing code) --- */
+.quote-section {
+  width: 30%;
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 10; /* Ensures text stays on top if they overlap */
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #00FF66; 
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+  display: inline-block;
+}
+
+.author {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  align-self: flex-end;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+  display: inline-block;
+}
+
+/* Quote Hover Effects */
+.quote-section:hover .quote-text {
+  color: #FFB800;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(160, 32, 240, 0.6);
+}
+
+.quote-section:hover .author {
+  transform: scale(1.1) translateX(10px);
+}
+
+/* --- NEW CHARACTER SECTION --- */
+.character-section {
+  flex: 0.65; /* Takes up the remaining space on the right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 500px; /* Adjust this to make him bigger/smaller */
+  height: 600px; /* Needs to match aspect ratio roughly */
+  
+  /* The Floating Animation applies to the whole wrapper */
+  animation: float 6s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/* Base style for both images */
+.char-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Fills the wrapper */
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out; /* Smooth fade switch */
+  /* Optional: Adds a subtle neon glow behind the character */
+  filter: drop-shadow(0 0 15px rgba(0, 255, 100, 0.3)); 
+}
+
+/* --- THE HOVER MAGIC --- */
+
+/* Initially, crazy guy is invisible */
+.crazy {
+  opacity: 0;
+  margin-top: 40px;
+}
+
+/* Initially, calm guy is visible */
+.calm {
+  opacity: 1;
+  height: 100%;
+  margin-top: 60px;
+}
+
+/* When hovering the WRAPPER, swap opacities */
+.image-wrapper:hover .calm {
+  opacity: 0;
+}
+
+.image-wrapper:hover .crazy {
+  opacity: 1;
+}
+
+/* --- FLOATING ANIMATION --- */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0px); /* Moves down */
+  }
+}

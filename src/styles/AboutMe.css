@@ -1,0 +1,156 @@
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  /* padding: 80px 60px; */
+}
+
+.about-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 35px;
+  /* max-width: ; */
+}
+
+/* ===== LEFT IMAGE (TV FRAME) ===== */
+.about-image {
+  width: 40%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+/* TV Frame Look */
+.tv-frame {
+  padding: 14px;
+  background: #111;
+  border-radius: 22px;
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.25),
+    inset 0 0 0 6px #222;
+}
+
+/* ===== RIGHT SIDE ===== */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===== HEADING ===== */
+.pixel-heading {
+  font-family: "Press Start 2P", monospace;
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+
+.pixel-heading span {
+  color: #a855f7;
+}
+
+/* ===== TERMINAL ===== */
+.terminal {
+  width: 100%;
+  min-height: 420px;
+  background: #0b0b0b;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.25);
+  overflow: hidden;
+}
+
+/* Header */
+.terminal-header {
+  height: 36px;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+/* Body */
+.terminal-text {
+  font-family: "VT323", monospace;
+  font-size: 24px;
+  line-height: 1.6;
+  padding: 18px 22px;
+}
+
+.terminal-line {
+  margin-bottom: 6px;
+  color: #e5e5e5;
+}
+
+/* Prompt & Cursor */
+.prompt {
+  color: #a855f7;
+  margin-right: 6px;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .terminal {
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+
+/* Social Medias */
+
+.social-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.social-icon {
+  color: #e5e5e5;
+  font-size: 28px;           /* ⬅️ matches terminal text size */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  color: #a855f7;
+  transform: scale(1.15);
+}

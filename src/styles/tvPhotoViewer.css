@@ -1,0 +1,58 @@
+.tv-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.tv-frame {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  background: url('/images/tv-frame.png') no-repeat center center;
+  background-size: cover;
+  padding: 40px; /* screen padding inside the TV */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.photo-tile {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-tile.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 0;
+}
+
+.photo-tile.active img {
+  transform: scale(1.05);
+}
