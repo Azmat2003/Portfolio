@@ -1,6 +1,6 @@
 import '../styles/home.css';
-import calm from "../assets/Subject.png";
-import crazy from "../assets/Subject2.png";
+import calm from "../assets/subject.png";
+import crazy from "../assets/subject2.png";
 
 
 const Home = () => {
