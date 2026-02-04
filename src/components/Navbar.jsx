@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* <li><a href="#projects" onClick={closeMenu}>Projects</a></li> */}
         <li><a href="#contact" onClick={closeMenu}>ContactMe</a></li>
         {/* <li><a href="#resume" onClick={closeMenu}>Resume</a></li> */}
-        <li><a href="https://drive.google.com/file/d/1jemJXQhxY900PfJ3nY4vcJUixkTlLIJn/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Resume</a></li>
+        <li><a href="https://drive.google.com/file/d/1rB0IqOIEHMxQrcFAq-8dKbnQ9_gFIoDK/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Resume</a></li>
       </ul>
     </nav>
   );
